@@ -15,7 +15,7 @@ export default class News extends Component {
 
   async componentDidMount() {
     console.log("CDM");
-    let url = `https://newsapi.org/v2/everything?q=tesla&from=2024-02-02&sortBy=publishedAt&apiKey=07842d535f0e4e85b598d534919f407a&pageSize=20`;
+    let url = `https://newsapi.org/v2/everything?q=tesla&from=2024-02-04&sortBy=publishedAt&apiKey=07842d535f0e4e85b598d534919f407a&pageSize=20`;
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
@@ -29,7 +29,7 @@ export default class News extends Component {
 
     }
     else {
-      let url = `https://newsapi.org/v2/everything?q=tesla&from=2024-02-02&sortBy=publishedAt&apiKey=07842d535f0e4e85b598d534919f407a&page=${this.state.page + 1}&pageSize=20`;
+      let url = `https://newsapi.org/v2/everything?q=tesla&from=2024-02-04&sortBy=publishedAt&apiKey=07842d535f0e4e85b598d534919f407a&page=${this.state.page + 1}&pageSize=20`;
       let data = await fetch(url);
       let parsedData = await data.json();
       console.log(parsedData);
@@ -42,7 +42,7 @@ export default class News extends Component {
   }
   handlePrevClick = async () => {
     console.log("Previous");
-    let url = `https://newsapi.org/v2/everything?q=tesla&from=2024-02-02&sortBy=publishedAt&apiKey=07842d535f0e4e85b598d534919f407a&page=${this.state.page - 1}&pageSize=20`;
+    let url = `https://newsapi.org/v2/everything?q=tesla&from=2024-02-04&sortBy=publishedAt&apiKey=07842d535f0e4e85b598d534919f407a&page=${this.state.page - 1}&pageSize=20`;
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
